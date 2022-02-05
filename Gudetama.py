@@ -701,12 +701,13 @@ while running:
             
 
         elif tool=="spray paint" and mb[0]==1:
+            #print("Hello")
             radius=int(size)
             rmx=randint(-radius,radius)
             rmy=randint(-radius,radius)
             #draws the dot for spraypaint only if it is within the circle. Program checks it with the equation of circles
             if (mx+rmx-mx)**2+(my+rmy-my)**2<=radius**2:
-                draw.circle(screen,c,(mx+rmx,my+rmy),0)
+                draw.circle(screen,c,(mx+rmx,my+rmy),1) #changed radius from 0 to 1 for updated pygame draw.circle function
             back=screen.copy()
 
         elif tool=="highlighter" and mb[0]==1:
